@@ -1,3 +1,5 @@
+//compilador online: https://www.onlinegdb.com/
+
 #include <stdio.h>
 #include <pthread.h>
 
