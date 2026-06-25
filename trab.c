@@ -21,7 +21,7 @@ int ehPrimo(int x) {
     return 1;
 }
 
-void *ourThread(void *arg) {
+void *processaNumeros(void *arg) {
     int id = *(int *)arg, numero;
 
     while (1) {
@@ -70,7 +70,7 @@ int main() {
 
     for (i = 0; i < qtdThreads; i++) {
         ids[i] = i;
-        pthread_create(&threads[i], NULL, ourThread, &ids[i]);
+        pthread_create(&threads[i], NULL, processaNumeros, &ids[i]);
     }
 
     for (i = 0; i < qtdThreads; i++) {
